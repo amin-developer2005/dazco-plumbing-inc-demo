@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Plumber in Wake Forest, NC | Dazco Plumbing Inc.",
+      "hasCanvas": false,
+      "bodyTextLen": 5042,
+      "bodyTextHash": "c0ca04821015c44d56993117eb4aa63096b69db0d4510bc587e623d3a88f373e",
+      "bodyTextPrefix": "Skip to content Website concept for Dazco Plumbing Inc. Details ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Plumber in Wake Forest, NC | Dazco Plumbing Inc.",
+      "hasCanvas": false,
+      "bodyTextLen": 5005,
+      "bodyTextHash": "93fd7d02b7222a9c3c97a567c66395063a410a8e11fd887be1f72698494ce05c",
+      "bodyTextPrefix": "Skip to content Website concept for Dazco Plumbing Inc. Details ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
