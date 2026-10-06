@@ -1,0 +1,21 @@
+name: Package source for Netlify deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  package-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Create source archive
+        run: git archive --format=zip --output=dazco-source.zip HEAD
+      - name: Upload source artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dazco-source
+          path: dazco-source.zip
+          retention-days: 1
