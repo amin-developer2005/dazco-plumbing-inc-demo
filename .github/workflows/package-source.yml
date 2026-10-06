@@ -1,4 +1,4 @@
-name: Package source for Netlify deployment
+name: Prepare Netlify MCP runtime
 
 on:
   push:
@@ -6,16 +6,20 @@ on:
       - main
 
 jobs:
-  package-source:
+  package-netlify-mcp:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Create source archive
-        run: git archive --format=zip --output=dazco-source.zip HEAD
-      - name: Upload source artifact
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Netlify MCP
+        run: npm install --prefix /tmp/netlify-mcp @netlify/mcp@1.17.0
+      - name: Package Netlify MCP runtime
+        run: tar -czf netlify-mcp-runtime.tgz -C /tmp/netlify-mcp node_modules package.json package-lock.json
+      - name: Upload runtime artifact
         uses: actions/upload-artifact@v4
         with:
-          name: dazco-source
-          path: dazco-source.zip
+          name: netlify-mcp-runtime
+          path: netlify-mcp-runtime.tgz
           retention-days: 1
